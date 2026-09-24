@@ -1,7 +1,9 @@
 # 🎭 FaceSwap AI Studio (Tăng Tốc NVIDIA GPU)
 
 Ứng dụng hoán đổi khuôn mặt (Face Swap) cao cấp dành cho hệ điều hành Windows, được tối ưu hóa tăng tốc phần cứng trực tiếp trên card đồ họa **NVIDIA** (DirectML / CUDA). Giao diện đồ họa hiện đại, thân thiện, dễ sử dụng với quy trình 5 bước tinh gọn.
+<img src="https://github.com/genyhomes/FaceSwap-AI-Studio/blob/main/FaceSwap-AI-Studio.jpg">
 
+Download link Tại đây: https://forumviet.com/threads/faceswap-ai-studio-su-dung-nvidia-gpu-app-hoan-doi-khuon-mat.5949/
 ---
 
 ## 🚀 Tính năng nổi bật
@@ -69,37 +71,3 @@ Tinh chỉnh các thanh trượt để đạt kết quả chân thực nhất:
    - Video: Chọn định dạng `.mp4`.
 3. Với video, thanh tiến trình sẽ hiển thị phần trăm hoàn thành (%), tốc độ xử lý (FPS), và thời gian còn lại (ETA).
 4. Khi xuất xong, nhấn nút **"Mở thư mục chứa"** để truy cập ngay vào tệp kết quả.
-
----
-
-## ⚡ Cách khởi động chương trình
-
-### Cách 1: Khởi động nhanh (Khuyên dùng)
-- Nhấp đúp chuột vào tệp **`run.bat`** trong thư mục `SwapFaces`.
-
-### Cách 2: Khởi động từ dòng lệnh
-Mở Terminal hoặc PowerShell tại thư mục dự án:
-```powershell
-.venv\Scripts\python.exe app.py
-```
-
----
-
-## 🛠️ Cấu trúc thư mục
-
-```
-SwapFaces/
-├── models/
-│   └── inswapper_128.onnx   # Mô hình AI hoán đổi khuôn mặt chính
-├── src/
-│   ├── __init__.py
-│   ├── engine.py            # AI Engine (InsightFace + ONNX DirectML/CUDA GPU)
-│   ├── video_processor.py   # Xử lý video đa luồng, tích hợp FFmpeg giữ âm thanh
-│   ├── utils.py             # Reinhard color transfer, xử lý đồ họa & FFmpeg
-│   └── gui.py               # Giao diện PyQt6 Hiện đại Dark Theme (5 Bước)
-├── test_assets/             # Dữ liệu ảnh mẫu kiểm thử
-├── app.py                   # Điểm khởi chạy chính của ứng dụng
-├── run.bat                  # File khởi động 1-click cho Windows
-├── requirements.txt         # Danh sách thư viện Python
-└── README.md                # Tài liệu hướng dẫn
-```
